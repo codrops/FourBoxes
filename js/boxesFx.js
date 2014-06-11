@@ -82,7 +82,7 @@
 			console.log(imgReplacement)
 			panel.removeChild( img );
 			panel.innerHTML = imgReplacement + panel.innerHTML;
-		}.bind(this) );
+		} );
 		// add navigation element
 		this.nav = document.createElement( 'nav' );
 		this.nav.innerHTML = '<span class="prev"><i></i></span><span class="next"><i></i></span>';
