@@ -79,7 +79,6 @@
 			for( var i = 0; i < self.panelsCount; ++i ) {
 				imgReplacement += '<div class="bg-tile"><div class="bg-img"><img src="' + img.src + '" /></div></div>'
 			}
-			console.log(imgReplacement)
 			panel.removeChild( img );
 			panel.innerHTML = imgReplacement + panel.innerHTML;
 		} );
