@@ -66,8 +66,7 @@
 		this.isAnimating = false;
 		// the panels
 		this.panels = [].slice.call( this.el.querySelectorAll( '.panel' ) );
-		// total number of panels (4 for this demo)
-		//this.panelsCount = this.panels.length;
+		// this number should be 4 (can not be changed)
 		this.panelsCount = 4;
 		// current panel´s index
 		this.current = 0;
@@ -155,12 +154,13 @@
 		this.isAnimating = true;
 
 		var self = this, currentPanel = this.panels[ this.current ];
-
+		//this.panels.length is the total number of panels
+		//can support various numbers of panels
 		if( dir === 'next' ) {
-			this.current = this.current < this.panelsCount - 1 ? this.current + 1 : 0;			
+			this.current = this.current < this.panels.length - 1 ? this.current + 1 : 0;			
 		}
 		else {
-			this.current = this.current > 0 ? this.current - 1 : this.panelsCount - 1;
+			this.current = this.current > 0 ? this.current - 1 : this.panels.length - 1;
 		}
 
 		// next panel to be shown
